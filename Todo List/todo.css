@@ -1,0 +1,197 @@
+/* Profile Picture */
+.port {
+  width: 60px;
+  height: 60px;
+  background-image: url(/SimpleBlog/picture/pic2.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  position: fixed;
+  left: 20px;
+  top: 40px;
+  transform: translateY(-50%);
+  z-index: 1001; /* Ensure it stays above everything else */
+}
+
+.port:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Header */
+header {
+  background-color: rgb(27, 33, 33);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: right;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav li a:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+/* Heart Icon */
+.heart {
+  height: 40px;
+  padding-left: 20px;
+  margin-top: -5px;
+  transition: transform 0.3s ease;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, p{
+  margin-left: 350px;
+}
+ul{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-left: 370px;
+}
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+#todo-list li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+#new-task {
+  margin-bottom: 10px;
+  flex-grow: 1;
+  margin-right: 5px;
+  padding: 5px; /* Add some padding to the textarea */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Add rounded corners */
+  resize: none; /* Prevent resizing of the textarea*/
+  height: auto; /* Make the textarea adjust its height */
+  overflow: hidden; /* Hide scrollbars initially */
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.input-area {
+  position: relative;
+  display: flex;
+  width: 50%;
+  margin-left: 350px;
+}
+
+.butt{
+background-color: rgb(0, 255, 17);
+color: rgb(11, 22, 22);
+border-radius: 4px;
+font-size: 20px;
+cursor: pointer;
+padding: 5px 10px;
+height: 43px;
+}
+
+.butt:hover{
+background-color: #08c705;
+}
+
+
+footer {
+  background-color: #333; /* Darker background for footer */
+  color: #fff;
+  padding: 20px 0px; /* Add some padding */
+  text-align: center; /* Center the content */
+  position: relative; /* Needed for social icons positioning */
+  bottom: -478px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 978px; /* Adjust as needed */
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  justify-content: space-between; /* Distribute space between text and links */
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0; /* Remove default margin */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Make the links horizontal */
+  gap: 20px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive footer adjustments (example) */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-links {
+      margin-top: 100px; /* Add some space between text and links */
+      flex-direction: column;
+  }
+}
