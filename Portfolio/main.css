@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Or Poppins if you prefer */
+}
+
+/* Profile Picture */
+.port {
+    width: 60px;
+    height: 60px;
+    background-image: url(/SimpleBlog/picture/pic2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    position: fixed;
+    left: 20px;
+    top: 40px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+.port:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Header */
+header {
+    background-color: rgb(27, 33, 33);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: right;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Heart Icon */
+.heart {
+    height: 40px;
+    padding-left: 20px;
+    margin-top: -5px;
+    transition: transform 0.3s ease;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+
+.home {
+    position: relative;
+    height: 60vh;
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.content {
+    max-width: 500px;
+    color: #555;
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.content h2 span {
+    color: rgb(27, 33, 33);
+}
+
+.content h4 {
+    font-size: 2em;
+    text-align: justify; /* Justify the text here */
+}
+
+.content p {
+    padding: 10px 0 40px 0;
+    text-align: justify; /* Justify the text here as well */
+    font-size: 20px;
+}
+
+.btn-group { /* Added a container for better button styling */
+    display: flex;  /* Use flexbox for horizontal layout */
+    gap: 20px;    /* Add some space between buttons */
+}
+
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: rgb(27, 33, 33);
+    border-radius: 10px;
+    border: 2px solid rgb(27, 33, 33);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-group a:hover:nth-child(1) {
+    color: rgb(27, 33, 33);
+    background: transparent;
+}
+
+.btn-group a:nth-child(2) { /* Removed unnecessary margin-left */
+    color: rgb(27, 33, 33);
+    background: transparent;
+    padding: 10px 30px; /* Adjusted padding */
+}
+
+.btn-group a:hover:nth-child(2) {
+    color: #fff;
+    background: rgb(27, 33, 33);
+}
+
+.social-icons {
+    position: absolute;
+    bottom: -70px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: rgb(27, 33, 33);
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    outline: 2px solid rgb(27, 33, 33);
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons a i {
+    color: #fff;
+}
+
+.me {
+    display: flex;
+    justify-content: flex-end; /* Pushes the image to the right */
+    position: absolute;
+    right: 180px; /* Adjusts spacing from the right edge */
+    bottom: -60px; /* Adjust this if needed */
+    max-width: 100%;
+}
+
+.me img {
+    width: 400px; /* Increased size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10%; /* Optional: Adds rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Optional: Adds a soft shadow */
+}
+
+
+
+
+
+footer {
+  background-color: #333; /* Darker background for footer */
+  color: #fff;
+  padding: 20px 0; /* Add some padding */
+  text-align: center; /* Center the content */
+  position: relative; /* Needed for social icons positioning */
+  bottom: -125px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 960px; /* Adjust as needed */
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  justify-content: space-between; /* Distribute space between text and links */
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0; /* Remove default margin */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Make the links horizontal */
+  gap: 20px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive footer adjustments (example) */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-links {
+      margin-top: 100px; /* Add some space between text and links */
+      flex-direction: column;
+  }
+}
